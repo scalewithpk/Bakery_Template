@@ -2,467 +2,324 @@
 Page.Title = "About Us";
 }
 
-<style>
-    /* =========================
-       ABOUT PAGE
-       ========================= */
+<style type="text/css">
 
-    #main {
-        margin: 0;
-        padding: 0;
-    }
-
-    .about-page {
-        font-family: Arial, Helvetica, sans-serif;
-        color: #3d2b1f;
+    .about-wrapper {
         background: #fffaf5;
+        padding: 40px 20px;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
-    /* HERO */
     .about-hero {
-        position: relative;
-        overflow: hidden;
-        padding: 90px 30px;
-        text-align: center;
-        background: linear-gradient(135deg, #3d2115, #7b3f20, #b66a35);
+        background: #5b321f;
         color: white;
-    }
-
-    .about-hero:before,
-    .about-hero:after {
-        content: "";
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(255,255,255,0.08);
-    }
-
-    .about-hero:before {
-        width: 300px;
-        height: 300px;
-        top: -120px;
-        left: -80px;
-    }
-
-    .about-hero:after {
-        width: 400px;
-        height: 400px;
-        bottom: -200px;
-        right: -100px;
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 2;
-        max-width: 850px;
-        margin: auto;
-    }
-
-    .coffee-icon {
-        font-size: 55px;
-        margin-bottom: 15px;
+        text-align: center;
+        padding: 55px 25px;
+        border-radius: 10px;
+        margin-bottom: 35px;
     }
 
     .about-hero h1 {
-        font-size: 52px;
-        margin: 0 0 15px;
-        font-weight: 800;
-        letter-spacing: -1px;
+        font-size: 42px;
+        margin: 10px 0;
     }
 
     .about-hero p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 0 auto;
         max-width: 700px;
-        margin: auto;
-        font-size: 19px;
-        line-height: 1.7;
-        color: #f9e9dc;
     }
 
-    /* STORY */
-    .about-container {
-        max-width: 1100px;
-        margin: auto;
-        padding: 70px 25px;
+    .about-content {
+        max-width: 1000px;
+        margin: 0 auto;
     }
 
-    .story-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-        align-items: center;
-    }
-
-    .story-content h2 {
-        font-size: 36px;
-        margin: 0 0 20px;
-        color: #4b2818;
-    }
-
-    .story-content h2 span {
-        color: #a85d2b;
-    }
-
-    .story-content p {
-        font-size: 17px;
-        line-height: 1.8;
-        color: #68574d;
-        margin-bottom: 18px;
-    }
-
-    .story-card {
+    .about-story {
         background: white;
-        border-radius: 20px;
-        padding: 40px;
-        box-shadow: 0 15px 45px rgba(70, 40, 20, 0.12);
-        text-align: center;
-        border: 1px solid #f0dfd2;
+        padding: 35px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.08);
     }
 
-    .story-card .big-icon {
-        font-size: 75px;
+    .about-story h2 {
+        color: #5b321f;
+        font-size: 30px;
+        margin-top: 0;
+    }
+
+    .about-story p {
+        color: #555;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .about-cards {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        border-spacing: 20px;
+        margin-left: -20px;
+    }
+
+    .about-card {
+        display: table-cell;
+        width: 33.33%;
+        background: white;
+        padding: 30px 20px;
+        text-align: center;
+        vertical-align: top;
+        border-radius: 10px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    }
+
+    .about-card .icon {
+        font-size: 45px;
         margin-bottom: 15px;
     }
 
-    .story-card h3 {
-        font-size: 25px;
-        color: #4b2818;
-        margin-bottom: 10px;
+    .about-card h3 {
+        color: #5b321f;
+        font-size: 21px;
+        margin: 10px 0;
     }
 
-    .story-card p {
-        color: #79675d;
+    .about-card p {
+        color: #666;
         line-height: 1.6;
+        font-size: 14px;
     }
 
-    /* STATS */
-    .stats-section {
-        background: #f1e4d8;
-        padding: 55px 25px;
-    }
-
-    .stats {
-        max-width: 1000px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
+    .about-stats {
+        background: #ead8c8;
+        padding: 30px;
+        margin: 30px 0;
+        border-radius: 10px;
         text-align: center;
     }
 
     .stat {
-        padding: 20px;
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
     }
 
     .stat-number {
-        font-size: 42px;
-        font-weight: 800;
-        color: #8c4c25;
-        margin-bottom: 8px;
-    }
-
-    .stat-label {
-        font-size: 16px;
-        color: #5f4d42;
-        font-weight: 600;
-    }
-
-    /* VALUES */
-    .values-section {
-        max-width: 1100px;
-        margin: auto;
-        padding: 75px 25px;
-        text-align: center;
-    }
-
-    .values-section h2 {
-        font-size: 36px;
-        color: #4b2818;
-        margin-bottom: 12px;
-    }
-
-    .section-subtitle {
-        color: #79675d;
-        font-size: 17px;
-        margin-bottom: 45px;
-    }
-
-    .values-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-    }
-
-    .value-card {
-        background: white;
-        border-radius: 18px;
-        padding: 35px 25px;
-        border: 1px solid #f0dfd2;
-        box-shadow: 0 10px 30px rgba(70, 40, 20, 0.07);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .value-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 18px 40px rgba(70, 40, 20, 0.14);
-    }
-
-    .value-icon {
-        font-size: 42px;
-        margin-bottom: 15px;
-    }
-
-    .value-card h3 {
-        color: #4b2818;
-        font-size: 21px;
-        margin-bottom: 12px;
-    }
-
-    .value-card p {
-        color: #75645a;
-        line-height: 1.6;
-        font-size: 15px;
-    }
-
-    /* CTA */
-    .about-cta {
-        margin-top: 20px;
-        padding: 70px 25px;
-        text-align: center;
-        background: linear-gradient(135deg, #4a2819, #8b4c28);
-        color: white;
-    }
-
-    .about-cta h2 {
-        font-size: 36px;
-        margin: 0 0 15px;
-    }
-
-    .about-cta p {
-        font-size: 17px;
-        color: #f3dfd0;
-        margin-bottom: 28px;
-    }
-
-    .cta-button {
-        display: inline-block;
-        padding: 14px 30px;
-        border-radius: 30px;
-        background: white;
-        color: #713d20;
-        text-decoration: none;
+        display: block;
+        color: #5b321f;
+        font-size: 32px;
         font-weight: bold;
-        transition: transform 0.2s ease;
     }
 
-    .cta-button:hover {
-        transform: scale(1.05);
+    .stat-text {
+        color: #555;
+        font-size: 14px;
     }
 
-    /* MOBILE */
-    @media (max-width: 768px) {
+    .about-footer {
+        background: #5b321f;
+        color: white;
+        text-align: center;
+        padding: 35px 20px;
+        border-radius: 10px;
+        margin-top: 35px;
+    }
 
-        .about-hero {
-            padding: 65px 20px;
-        }
+    .about-footer h2 {
+        margin-top: 0;
+        font-size: 28px;
+    }
+
+    .about-footer p {
+        color: #f4e5d8;
+        line-height: 1.6;
+    }
+
+    @media screen and (max-width: 700px) {
 
         .about-hero h1 {
-            font-size: 38px;
+            font-size: 32px;
         }
 
-        .about-hero p {
-            font-size: 16px;
+        .about-cards {
+            display: block;
+            width: 100%;
+            margin-left: 0;
         }
 
-        .story-grid {
-            grid-template-columns: 1fr;
+        .about-card {
+            display: block;
+            width: auto;
+            margin-bottom: 20px;
         }
 
-        .stats {
-            grid-template-columns: 1fr;
-        }
-
-        .values-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .story-content h2,
-        .values-section h2,
-        .about-cta h2 {
-            font-size: 30px;
+        .stat {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
         }
     }
+
 </style>
 
-<div class="about-page">
+<section id="main">
 
 ```
-<!-- HERO -->
-<section class="about-hero">
+<div class="about-wrapper">
 
-    <div class="hero-content">
+    <!-- HERO SECTION -->
+    <div class="about-hero">
 
-        <div class="coffee-icon">☕</div>
+        <div style="font-size:50px;">☕</div>
 
         <h1>Our Story</h1>
 
         <p>
-            Great coffee, fresh baked goods and a little bit of technology
-            came together to create something truly special.
+            Great coffee, fresh baked goods and a passion for creating
+            memorable experiences.
         </p>
 
     </div>
 
-</section>
 
+    <div class="about-content">
 
-<!-- STORY -->
-<section class="about-container">
+        <!-- STORY -->
+        <div class="about-story">
 
-    <div class="story-grid">
-
-        <div class="story-content">
-
-            <h2>
-                From a Passion for Coffee
-                <span>to a Way of Life</span>
-            </h2>
+            <h2>From Passion to a Way of Life</h2>
 
             <p>
                 Fourth Coffee was founded in 2010 with a simple idea:
-                bring great coffee and fresh baked goods directly to
-                people's doors.
+                deliver great coffee and fresh baked goods directly
+                to your door.
             </p>
 
             <p>
                 In another life, Bill Baker was a developer by day and
-                pastry chef by night. But his natural talent with butter,
-                flour and sugar soon became impossible to ignore.
+                pastry chef by night. His natural talent with butter,
+                flour and sugar soon became more than a hobby.
             </p>
 
             <p>
                 What started as a way to satisfy his own sweet tooth
-                quickly became a passion — and eventually, Fourth Coffee.
+                became an all-consuming passion. And that passion
+                eventually became Fourth Coffee.
+            </p>
+
+            <p>
+                Today, Fourth Coffee brings together traditional
+                baking craftsmanship and modern technology. Our
+                online ordering system makes it easy for anyone with
+                internet access to order delicious, locally sourced
+                coffee, pastries, cookies and cakes.
             </p>
 
         </div>
 
 
-        <div class="story-card">
+        <!-- STATS -->
+        <div class="about-stats">
 
-            <div class="big-icon">🍰</div>
+            <div class="stat">
 
-            <h3>Where Passion Meets Technology</h3>
+                <span class="stat-number">2010</span>
+
+                <span class="stat-text">
+                    Founded
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span class="stat-number">24h</span>
+
+                <span class="stat-text">
+                    Fresh Delivery
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span class="stat-number">100%</span>
+
+                <span class="stat-text">
+                    Passion
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- FEATURES -->
+        <div class="about-cards">
+
+            <div class="about-card">
+
+                <div class="icon">☕</div>
+
+                <h3>Great Coffee</h3>
+
+                <p>
+                    Carefully selected coffee prepared for people
+                    who appreciate quality in every cup.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="icon">🥐</div>
+
+                <h3>Freshly Baked</h3>
+
+                <p>
+                    Delicious pastries, cookies and cakes made with
+                    quality ingredients and lots of passion.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <div class="icon">💻</div>
+
+                <h3>Modern Technology</h3>
+
+                <p>
+                    Our simple online ordering system makes getting
+                    your favorite treats fast and convenient.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER / CTA -->
+        <div class="about-footer">
+
+            <h2>Made With Passion</h2>
 
             <p>
-                We combine traditional baking craftsmanship with a
-                modern online ordering experience, making it easy to
-                enjoy locally sourced treats wherever you are.
+                From our kitchen to your doorstep,
+                every order is made with care.
             </p>
 
         </div>
 
     </div>
-
-</section>
-
-
-<!-- STATS -->
-<section class="stats-section">
-
-    <div class="stats">
-
-        <div class="stat">
-            <div class="stat-number">2010</div>
-            <div class="stat-label">Founded</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-number">24h</div>
-            <div class="stat-label">Fresh Delivery</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-number">100%</div>
-            <div class="stat-label">Locally Sourced</div>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- VALUES -->
-<section class="values-section">
-
-    <h2>What Makes Us Special</h2>
-
-    <p class="section-subtitle">
-        More than coffee. More than pastries. It's an experience.
-    </p>
-
-
-    <div class="values-grid">
-
-        <div class="value-card">
-
-            <div class="value-icon">☕</div>
-
-            <h3>Exceptional Coffee</h3>
-
-            <p>
-                Carefully selected coffee made for people who appreciate
-                every sip.
-            </p>
-
-        </div>
-
-
-        <div class="value-card">
-
-            <div class="value-icon">🥐</div>
-
-            <h3>Freshly Baked</h3>
-
-            <p>
-                Delicious pastries, cookies and cakes prepared with
-                quality ingredients and plenty of passion.
-            </p>
-
-        </div>
-
-
-        <div class="value-card">
-
-            <div class="value-icon">💻</div>
-
-            <h3>Smart Technology</h3>
-
-            <p>
-                Our online ordering system makes ordering your favorite
-                treats simple, fast and convenient.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CALL TO ACTION -->
-<section class="about-cta">
-
-    <h2>Made With Passion. Delivered With Care.</h2>
-
-    <p>
-        Your favorite coffee and freshly baked treats are just a few
-        clicks away.
-    </p>
-
-    <a href="/" class="cta-button">
-        Explore Our Menu →
-    </a>
-
-</section>
-```
 
 </div>
+```
+
+</section>
