@@ -2,320 +2,79 @@
 Page.Title = "About Us";
 }
 
-<style type="text/css">
-
-    .about-wrapper {
-        background: #fffaf5;
-        padding: 40px 20px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .about-hero {
-        background: #5b321f;
-        color: white;
-        text-align: center;
-        padding: 55px 25px;
-        border-radius: 10px;
-        margin-bottom: 35px;
-    }
-
-    .about-hero h1 {
-        font-size: 42px;
-        margin: 10px 0;
-    }
-
-    .about-hero p {
-        font-size: 18px;
-        line-height: 1.6;
-        margin: 0 auto;
-        max-width: 700px;
-    }
-
-    .about-content {
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-
-    .about-story {
-        background: white;
-        padding: 35px;
-        border-radius: 10px;
-        margin-bottom: 30px;
-        box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-    }
-
-    .about-story h2 {
-        color: #5b321f;
-        font-size: 30px;
-        margin-top: 0;
-    }
-
-    .about-story p {
-        color: #555;
-        font-size: 16px;
-        line-height: 1.8;
-    }
-
-    .about-cards {
-        display: table;
-        width: 100%;
-        table-layout: fixed;
-        border-spacing: 20px;
-        margin-left: -20px;
-    }
-
-    .about-card {
-        display: table-cell;
-        width: 33.33%;
-        background: white;
-        padding: 30px 20px;
-        text-align: center;
-        vertical-align: top;
-        border-radius: 10px;
-        box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-    }
-
-    .about-card .icon {
-        font-size: 45px;
-        margin-bottom: 15px;
-    }
-
-    .about-card h3 {
-        color: #5b321f;
-        font-size: 21px;
-        margin: 10px 0;
-    }
-
-    .about-card p {
-        color: #666;
-        line-height: 1.6;
-        font-size: 14px;
-    }
-
-    .about-stats {
-        background: #ead8c8;
-        padding: 30px;
-        margin: 30px 0;
-        border-radius: 10px;
-        text-align: center;
-    }
-
-    .stat {
-        display: inline-block;
-        width: 30%;
-        vertical-align: top;
-    }
-
-    .stat-number {
-        display: block;
-        color: #5b321f;
-        font-size: 32px;
-        font-weight: bold;
-    }
-
-    .stat-text {
-        color: #555;
-        font-size: 14px;
-    }
-
-    .about-footer {
-        background: #5b321f;
-        color: white;
-        text-align: center;
-        padding: 35px 20px;
-        border-radius: 10px;
-        margin-top: 35px;
-    }
-
-    .about-footer h2 {
-        margin-top: 0;
-        font-size: 28px;
-    }
-
-    .about-footer p {
-        color: #f4e5d8;
-        line-height: 1.6;
-    }
-
-    @media screen and (max-width: 700px) {
-
-        .about-hero h1 {
-            font-size: 32px;
-        }
-
-        .about-cards {
-            display: block;
-            width: 100%;
-            margin-left: 0;
-        }
-
-        .about-card {
-            display: block;
-            width: auto;
-            margin-bottom: 20px;
-        }
-
-        .stat {
-            display: block;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-    }
-
-</style>
-
 <section id="main">
 
 ```
-<div class="about-wrapper">
+<div style="background:#5b321f; color:white; padding:40px; text-align:center; margin-bottom:30px;">
+    <h1 style="font-size:40px; margin:10px 0;">About Fourth Coffee</h1>
+    <p style="font-size:18px;">
+        Great coffee. Fresh baked goods. Delivered with care.
+    </p>
+</div>
 
-    <!-- HERO SECTION -->
-    <div class="about-hero">
+<div style="padding:20px;">
 
-        <div style="font-size:50px;">☕</div>
+    <h2>Our Story</h2>
 
-        <h1>Our Story</h1>
+    <p>
+        Fourth Coffee was founded in 2010 with a simple idea:
+        deliver great coffee and fresh baked goods right to your door.
+    </p>
+
+    <p>
+        In another life, Bill Baker was a developer by day and pastry
+        chef by night. His passion for butter, flour and sugar soon
+        became more powerful than his programming talents.
+    </p>
+
+    <p>
+        What started as a way to satisfy his own sweet tooth became
+        an exciting journey and eventually Fourth Coffee.
+    </p>
+
+    <p>
+        Today, Fourth Coffee brings together delicious coffee,
+        pastries, cookies and cakes with a modern online ordering
+        experience.
+    </p>
+
+    <hr />
+
+    <h2>Why Choose Us?</h2>
+
+    <table style="width:100%; text-align:center;">
+        <tr>
+            <td style="padding:20px;">
+                <h3>☕ Great Coffee</h3>
+                <p>Fresh and delicious coffee made with care.</p>
+            </td>
+
+            <td style="padding:20px;">
+                <h3>🍰 Fresh Baked Goods</h3>
+                <p>Delicious cakes, cookies and pastries.</p>
+            </td>
+
+            <td style="padding:20px;">
+                <h3>🚚 Fast Delivery</h3>
+                <p>Fresh products delivered directly to your door.</p>
+            </td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <div style="background:#f5eee8; padding:30px; text-align:center; margin-top:30px;">
+
+        <h2>Made With Passion</h2>
 
         <p>
-            Great coffee, fresh baked goods and a passion for creating
-            memorable experiences.
+            From our kitchen to your doorstep, every order is prepared
+            with quality ingredients and lots of passion.
         </p>
 
-    </div>
-
-
-    <div class="about-content">
-
-        <!-- STORY -->
-        <div class="about-story">
-
-            <h2>From Passion to a Way of Life</h2>
-
-            <p>
-                Fourth Coffee was founded in 2010 with a simple idea:
-                deliver great coffee and fresh baked goods directly
-                to your door.
-            </p>
-
-            <p>
-                In another life, Bill Baker was a developer by day and
-                pastry chef by night. His natural talent with butter,
-                flour and sugar soon became more than a hobby.
-            </p>
-
-            <p>
-                What started as a way to satisfy his own sweet tooth
-                became an all-consuming passion. And that passion
-                eventually became Fourth Coffee.
-            </p>
-
-            <p>
-                Today, Fourth Coffee brings together traditional
-                baking craftsmanship and modern technology. Our
-                online ordering system makes it easy for anyone with
-                internet access to order delicious, locally sourced
-                coffee, pastries, cookies and cakes.
-            </p>
-
-        </div>
-
-
-        <!-- STATS -->
-        <div class="about-stats">
-
-            <div class="stat">
-
-                <span class="stat-number">2010</span>
-
-                <span class="stat-text">
-                    Founded
-                </span>
-
-            </div>
-
-
-            <div class="stat">
-
-                <span class="stat-number">24h</span>
-
-                <span class="stat-text">
-                    Fresh Delivery
-                </span>
-
-            </div>
-
-
-            <div class="stat">
-
-                <span class="stat-number">100%</span>
-
-                <span class="stat-text">
-                    Passion
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- FEATURES -->
-        <div class="about-cards">
-
-            <div class="about-card">
-
-                <div class="icon">☕</div>
-
-                <h3>Great Coffee</h3>
-
-                <p>
-                    Carefully selected coffee prepared for people
-                    who appreciate quality in every cup.
-                </p>
-
-            </div>
-
-
-            <div class="about-card">
-
-                <div class="icon">🥐</div>
-
-                <h3>Freshly Baked</h3>
-
-                <p>
-                    Delicious pastries, cookies and cakes made with
-                    quality ingredients and lots of passion.
-                </p>
-
-            </div>
-
-
-            <div class="about-card">
-
-                <div class="icon">💻</div>
-
-                <h3>Modern Technology</h3>
-
-                <p>
-                    Our simple online ordering system makes getting
-                    your favorite treats fast and convenient.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- FOOTER / CTA -->
-        <div class="about-footer">
-
-            <h2>Made With Passion</h2>
-
-            <p>
-                From our kitchen to your doorstep,
-                every order is made with care.
-            </p>
-
-        </div>
+        <p>
+            <strong>Fourth Coffee — Since 2010</strong>
+        </p>
 
     </div>
 
@@ -323,3 +82,6 @@ Page.Title = "About Us";
 ```
 
 </section>
+
+<div id="sidebar">
+</div>
